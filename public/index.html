@@ -1,42 +1,317 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/tailwind.css">
+<html class="dark scroll-smooth" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../public/css/tailwind.css" />
     <title>Marvels World</title>
-</head>
-<body>
-    <nav></nav>
-    <div id="tab_bar"></div>
-    <section class="w-full h-screen">
-        <div id="home">
-            <div class="w-full h-3/4">
-                <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center ">
-                    <input type="search" class="outline-none p-3 rounded-full shadow-sm text-center" placeholder="Buscar" name="" id="">
-                    <button class="w-36 rounded-full text-xl text-gray-700 shadow-sm font-semibold p-4 bg-white">Explorar</button>
-                </div>
-                <div class="w-full h-full">
-                    <img src="./img/sanFrancisco.jpg" alt="MoonKnight">
-                </div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-Montserrat dark:bg-gray-900">
+    <nav class="w-full h-14 hidden bg-white lg:flex lg:fixed lg:z-10 p-4 justify-between border-b-4 border-primary dark:bg-gray-800">
+        <div class="h-auto w-auto">
+            <p class="text-xl text-primary font-black dark:text-white">Marvel World</p>
         </div>
-        <div class= "p-20"id="recomendadas">
-            <div class="Card">  
-                <div class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover"></div>
-                <div class="w-full h-3/5 bg-gray-700 p-4">
-                    <p class="text-white text-base mb-2">MoonKnight</p>
-                    <p class="text-white text-xs">La investigación de los misterios del antiguo Egipto desde el interior de un mismo cuerpo.</p>
-                </div>
-            </div>
+
+        <div class="flex space-x-8">
+            <a class="nav-items dark:text-white" href="#home">Inicio</a>
+            <a class="nav-items dark:text-white" href="#recomendadas">Recomendados</a>
+            <a class="nav-items dark:text-white" href="#rentas_destacadas">Rentas</a>
+            <a class="nav-items dark:text-white" href="#faqs">FAQs</a>
+            <a class="nav-items dark:text-white" href="#sobre_nosotros">Sobre nosotros</a>
         </div>
-        <div id="rentas_destacadas"></div>
-        <div id="faq"></div>
+        <div class="flex space-x-4">
+            <a href="">
+                <i class="nav-icons fa-search fa-solid dark:text-white"></i>
+            </a>
+            <button class="toggle">
+              
+                  <i class="nav-icons fa-moon fa-solid dark:text-white"></i>
+              
+            </button>
+            <a href="./registrationForm.html">
+                <i class="nav-icons fa-user fa-solid dark:text-white"></i>
+            </a>
+        </div>
+    </nav>
+    <section class="w-full h-auto">
+      <div id="home">
+        <div class="w-full h-2/5">
+          <div
+            class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-20 lg:justify-start"
+          >
+            <input
+              class="w-48 outline-none p-3 rounded-full shadow-sm transition-all duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 text-center lg:hidden"
+              placeholder="Buscar"
+              type="search"
+              id=""
+            />
+            <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+                <p class="text-4xl ml-16 font-bold text-white">Bienvenido al mundo marvel</p>
+            </div>
+            <button
+              class="w-48 rounded-full text-lg text-gray-700 shadow-sm font-semibold p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform: hover:-translate-y-1 hover:scale-110 lg:ml-16"
+            >
+              Explorar
+            </button>
+          </div>
+          <div class="w-full h-auto lg:h-96 lg:bg-portada lg:bg-cover lg:bg- ">
+            <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="MoonKnight" />
+          </div>
+        </div>
+      </div>
+      <div class="p-6" id="recomendados">
+        <p class="text-3xl font-semibold text-primary dark:text-white">Recomendados</p>
+        <div
+          class="w-auto h-72 items-center mt-6 overflow-x-auto flex space-x-6 overflow-y-hidden"
+        >
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-700 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-800 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-800 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-700 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-800 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-700 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-800 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-700 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-800 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+          <div class="Card">
+            <div
+              class="w-full h-3/5 rounded-t-lg bg-moonKnight bg-cover overscroll-x-contain"
+            ></div>
+            <div class="w-full h-3/5 bg-gray-700 p-4">
+              <p class="text-white text-base mb-2">MoonKnight</p>
+              <p class="text-white text-xs">
+                La investigación de los misterios del antiguo Egipto desde el
+                interior de un mismo cuerpo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="recomendados" class="p-6 h-auto w-full">
+        <p class="text-3xl text-primary font-semibold dark:text-white">Tendencias</p>
+        <div
+          class="w-full h-full flex flex-col space-y-4 items-center justify-center mt-6"
+        >
+          <div
+            class="w-full h-96 bg-chicago bg-cover rounded-xl lg:h-[38rem] lg:text-right lg:bg-center lg:pt-12"
+          >
+            <p class="card-title">Chicago</p>
+            <p class="text-sm pl-8 text-white mr-24 lg:mr-8 lg:text-base">
+              2 rooms, bathroom and kitchen.
+            </p>
+          </div>
+          <div
+            class="w-full h-full grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-stretch gap-4"
+          >
+            <div
+              class="w-full h-96 bg-moonKnight bg-cover rounded-xl lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:text-right lg:bg-center lg:pt-12"
+            >
+              <p class="card-title">Los Angeles</p>
+              <p class="text-sm pl-8 text-white mr-24 lg:mr-8 lg:text-base">
+                4 rooms, 3 bathrooms, kitchen and private pool.
+              </p>
+            </div>
+            <div
+              class="w-full h-96 bg-miami bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:text-right lg:bg-center lg:pt-12"
+            >
+              <p class="card-title">Miami</p>
+              <p class="text-sm pl-8 text-white mr-24 lg:mr-8 lg:text-base">
+                3 rooms, 2 bathrooms, kitchen and amazing sea view.
+              </p>
+            </div>
+            <div
+              class="w-full h-96 bg-bali bg-cover rounded-xl lg:row-span-1 lg:col-span-3 lg:text-right lg:bg-center lg:pt-12"
+            >
+              <p class="card-title">Bali</p>
+              <p class="text-sm pl-8 text-white mr-24 lg:mr-8 lg:text-base">
+                2 rooms, 2 bathrooms, kitchen and private pool.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-auto" id="faqs">
+        <div class="w-full h-full px-6 flex flex-col space-y-4">
+          <p class="text-3xl text-primary font-semibold mt-6 dark:text-white">FAQS</p>
+          <div class="dark:text-white">
+            <p class="text-xl font-medium text-primary dark:text-white">
+              Política de Cancelación
+            </p>
+            <p class="text-md pt-2">
+              Para estancias menores a una semana es importante avisar con 3
+              días de anticipación, de caso contario será sancionado.
+            </p>
+          </div>
+          <div class="dark:text-white">
+            <p class="text-xl font-medium text-primary dark:text-white">Métodos de pago</p>
+            <p class="text-md pt-2">
+              Aceptamos distintos métodos de pago: VISA, MasterCard, American
+              Express, Paypal y Binance
+            </p>
+          </div>
+          <div class="dark:text-white">
+            <p class="text-xl font-medium text-primary dark:text-white">Mascotas</p>
+            <p class="text-md pt-2">
+              El tema de las mascotas dependerá directamente del anfitrión.
+            </p>
+          </div>
+          <div class="dark:text-white">
+            <p class="text-xl font-medium text-primary dark:text-white">
+              Información de Seguridad
+            </p>
+            <p class="text-md pt-2">
+              Todas nuestras estancias cuentan con seguro en caso de accidentes
+            </p>
+          </div>
+          <div class="dark:text-white">
+            <p class="text-xl font-medium text-primary dark:text-white">Estancias Largas</p>
+            <p class="text-md pt-2">
+              Contamos con estancias de hasta 3 meses, en este caso es requerido
+              un anticipo con un monto del 50% del valor de la renta
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <footer></footer>
-</body>
+    <footer
+      class="w-full h-auto bg-gray-50 space-y-2 mt-7 text-sm text-gray-900"
+    >
+      <p>Acerca de</p>
+      <p>Más de marvel</p>
+      <p>Contactenos</p>
+      <p>Términos y condiciones</p>
+    </footer>
+
+    <div
+      id="tab_bar"
+      class="w-full h-16 bg-white flex items-center justify-center space-x-10 fixed left-0 bottom-0 lg:hidden dark:bg-gray-700"
+    >
+      <a href="#home">
+        <i class="fa-solid fa-house text-xl text-violet-800 dark:text-white"></i>
+      </a>
+      <a href="#treding">
+        <i class="fa-solid fa-magnifying-glass text-xl text-tertiary dark:text-white"></i>
+      </a>
+      <button class="toggle">
+        <i class="fa-solid fa-heart text-xl text-violet-800 dark:text-white"></i>
+      </button>
+      <a href="#home">
+        <i class="fa-solid fa-user text-xl text-violet-800 dark:text-white"></i>
+      </a>
+    </div>
+     <script src="../index.js"></script>
+  </body>
 </html>
