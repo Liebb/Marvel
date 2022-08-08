@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .Card {
-    @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl
+    @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl;
 }
 .CardTitle{
-    @apply text-3xl px-8 pt-8 pb-2 font-semibold text-white
+    @apply text-3xl px-8 pt-8 pb-2 font-semibold text-white;
 }
 .Card:nth-child(1) {
     @apply bg-secondary text-white dark:bg-gray-700;
@@ -15,7 +15,7 @@
     @apply bg-white text-tertiary dark:bg-yellow-400 dark:text-gray-300;
   }
 .nav-items {
-    @apply font-bold text-base text-primary
+    @apply font-bold text-base text-primary;
 }
 
 .nav-icons{
